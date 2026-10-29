@@ -1,0 +1,23 @@
+/* Estilo da página "pagina-codigo" (exemplo). Carrega só nela, depois do base.css. */
+
+.hero {
+	max-width: var(--largura);
+	margin: 0 auto;
+	padding: 96px 16px;
+	text-align: center;
+}
+
+.hero__imagem {
+	margin: 0 auto 32px;
+	border-radius: var(--raio);
+}
+
+.hero h1 {
+	font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.hero__texto {
+	max-width: 56ch;
+	margin: 0 auto 32px;
+	font-size: 1.125rem;
+}

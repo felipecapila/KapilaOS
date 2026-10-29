@@ -16,6 +16,7 @@ Conforme você for ativando skills, isso aqui vai sendo populado. Lista do que c
 | `/aprovar-post` | `postar-facebook.js` | Publica carrossel no Facebook via Meta Graph API |
 | `/anuncio-google` | (nenhum — gera CSV direto) | — |
 | `/relatorio-ads` | (lê CSV exportado das plataformas) | — |
+| `/publicar-wp` | `publicar-wp.sh` (já incluso) | Compara, faz backup e publica o tema filho WordPress na Hostinger via SSH/rsync ou SFTP |
 
 ## Pré-requisitos comuns
 

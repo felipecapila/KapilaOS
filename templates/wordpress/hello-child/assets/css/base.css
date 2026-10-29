@@ -1,0 +1,71 @@
+/*
+ * Base das páginas por código (carrega só nelas, nunca nas do Elementor).
+ * Tudo fica sob .kapila-pagina / .kapila-codigo pra não vazar no cabeçalho
+ * do Elementor nas páginas de layout "site".
+ * Troque os tokens pela identidade do cliente.
+ */
+
+:root {
+	--cor-fundo: #ffffff;
+	--cor-texto: #111111;
+	--cor-destaque: #111111;
+	--cor-destaque-texto: #ffffff;
+	--fonte-titulo: system-ui, -apple-system, "Segoe UI", sans-serif;
+	--fonte-texto: system-ui, -apple-system, "Segoe UI", sans-serif;
+	--largura: 1120px;
+	--raio: 12px;
+}
+
+body.kapila-codigo {
+	margin: 0;
+	background: var(--cor-fundo);
+	color: var(--cor-texto);
+	font-family: var(--fonte-texto);
+	-webkit-font-smoothing: antialiased;
+}
+
+.kapila-pagina,
+.kapila-pagina *,
+.kapila-pagina *::before,
+.kapila-pagina *::after {
+	box-sizing: border-box;
+}
+
+.kapila-pagina {
+	font-family: var(--fonte-texto);
+	color: var(--cor-texto);
+	line-height: 1.6;
+}
+
+.kapila-pagina h1,
+.kapila-pagina h2,
+.kapila-pagina h3 {
+	font-family: var(--fonte-titulo);
+	line-height: 1.15;
+	margin: 0 0 0.5em;
+}
+
+.kapila-pagina p {
+	margin: 0 0 1em;
+}
+
+.kapila-pagina img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+.kapila-pagina .botao {
+	display: inline-block;
+	padding: 0.9em 1.6em;
+	border-radius: var(--raio);
+	background: var(--cor-destaque);
+	color: var(--cor-destaque-texto);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.kapila-rodape {
+	padding: 24px 16px;
+	text-align: center;
+}

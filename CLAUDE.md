@@ -99,6 +99,49 @@ inteiro, só adicionar ou editar a linha relevante.
 
 ---
 
+## Padrões de sites e páginas
+
+Valem pra todo site, landing page ou página de cliente, novo ou em atualização.
+
+**Organização**
+
+- Cliente novo → `clientes/<Nome>/` com `briefing.md`. Funil em `clientes/<Nome>/funil.md`, páginas em `clientes/<Nome>/paginas/`
+- Site estático (HTML/CSS/JS) fica em `clientes/<Nome>/site/`
+- Site em WordPress → `/novo-wp` (projeto em `clientes/<Nome>/wordpress/`, tema filho do Hello Elementor, MAMP local). Página nova num projeto WordPress também é `/novo-wp`: perguntar se é por código ou Elementor, e nunca converter uma na outra sem pedido
+- Publicar/atualizar WordPress na Hostinger → `/publicar-wp`, sempre com plano + confirmação explícita. Nunca publicar só porque algo foi salvo; nunca sincronizar banco automaticamente
+- Demo de prospecção → usar logo, fotos e dados reais do próprio cliente (site antigo/Instagram em `referencias/`). Tudo que for provisório fica marcado `PLACEHOLDER` no código e listado no `briefing.md` como pendente
+
+**Rodapé e endereços**
+
+- Todo site leva no rodapé o crédito "Desenvolvido por Kapila", com "Kapila" linkando pra https://felipecapila.com.br. Ao atualizar projeto que ainda não tem, adicionar
+- Site estático nunca mostra `.html` (nem `.php`) no endereço: links internos, canonical e sitemap usam `dominio/pagina`, e o `.htaccess` serve o arquivo por dentro e redireciona (301) quem acessar com a extensão
+- Ao trocar uma imagem já publicada (logo, favicon, og-image, foto), salvar com **nome de arquivo novo** (ou `?v=N`). Imagem fica em cache por 1 ano no navegador e na CDN da Hostinger, e com o mesmo nome a antiga continua aparecendo
+
+**Scroll suave (Lenis)**
+
+- Todo site tem Lenis: `lenis@1.3.4` via jsDelivr, `duration: 1.15`, easing expo, âncoras internas com `lenis.scrollTo` descontando o header, `lenis.stop()/start()` ao abrir menu/modal, desligado com `prefers-reduced-motion`
+- `data-lenis-prevent` só em área com rolagem **vertical** própria (menu, modal, lista longa). Área que só rola pro lado (tabela, abas, carrossel, Kanban) usa `data-lenis-prevent-horizontal`, senão a roda do mouse trava na página. Testar com a roda do mouse em cima da área
+
+**Texto**
+
+- Nunca usar travessão (—), meia-risca (–) ou hífen solto ( - ) em títulos e textos de cliente: cliente lê como texto de IA. Trocar por ponto, vírgula ou dois-pontos. Evitar também hífen em título ("liberá-lo" → reescrever) e traço decorativo antes de sobretítulo. Revisar com busca por "—", "–" e " - " antes de entregar
+
+**Design sem cara de IA**
+
+- Evitar: serifa editorial com palavra em itálico colorido no título, sobretítulo em caixa alta ou selo em pílula acima de título, numeração 01/02/03 em toda lista, grade de células com borda fina e cantos retos, brilho em volta de foto, selo inclinado, ícone dentro de quadrado colorido, o mesmo esquema "título gigante + texto cinza + link" em toda seção
+- Preferir: sans moderna (peso 700, tracking negativo), destaque só por cor, cantos arredondados (20 a 40px) com sombra suave, seções escuras como painéis arredondados com margem, foto real sangrada, layout variando entre seções
+- Botões do topo sempre acima da dobra numa tela de ~1450x700
+- Cards curtos (contatos, diferenciais, itens) no desktop ficam lado a lado numa faixa de 3 ou 4 colunas, nunca empilhados numa coluna estreita. Tablet 2 colunas, celular empilha
+- Imagem com `width`/`height` no HTML precisa de `height: auto` no CSS
+
+**HTML que vira PDF (e-book, apresentação)**
+
+- `box-shadow` com blur vira retângulo preto no PDF do Chrome. Fazer a sombra com uma camada própria com `filter: blur()` e deixar `box-shadow` só em `@media screen`
+- Textura de papel em filtro SVG deixa o PDF enorme (40 MB+) e muda no Preview do Mac. Usar PNG de textura com transparência, sem `mix-blend-mode`
+- Sempre gerar um PDF de teste e olhar as páginas antes de entregar
+
+---
+
 ## Criação de skills
 
 Quando o usuário pedir skill nova:

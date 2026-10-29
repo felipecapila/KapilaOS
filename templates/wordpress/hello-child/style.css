@@ -1,0 +1,31 @@
+/*
+Theme Name:   {{NOME_TEMA}}
+Theme URI:    https://felipecapila.com.br
+Description:  Tema filho do Hello Elementor para {{CLIENTE}}. Desenvolvido por Kapila.
+Author:       Kapila
+Author URI:   https://felipecapila.com.br
+Template:     hello-elementor
+Version:      1.0.0
+Requires at least: 6.0
+Requires PHP: 7.4
+Text Domain:  kapila-child
+License:      GNU General Public License v3 or later
+License URI:  https://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+/*
+ * Este arquivo carrega em TODAS as páginas (código e Elementor).
+ * Use só pra ajustes globais pequenos. O visual das páginas por código
+ * fica em assets/css/base.css e assets/css/<template>.css.
+ */
+
+.kapila-credito {
+	margin: 0;
+	font-size: 0.8125rem;
+	opacity: 0.7;
+}
+
+.kapila-credito a {
+	color: inherit;
+	text-decoration: underline;
+}

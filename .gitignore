@@ -24,3 +24,36 @@ node_modules/
 # Drop zone do usuário (só o README vai versionado)
 dados/*
 !dados/README.md
+
+# Credenciais e ambiente (nunca versionar)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.ppk
+id_rsa*
+id_ed25519*
+wp-config.php
+auth.json
+
+# Bancos de dados e exportações de migração
+*.sql
+*.sql.gz
+*.sqlite
+*.sqlite3
+*.db
+*.wpress
+installer.php
+
+# WordPress: backups e planos do /publicar-wp (cópias do servidor)
+.backups/
+*.sftp
+
+# Builds e temporários
+.next/
+*.bak
+*.swp
+*~
+.cache/
