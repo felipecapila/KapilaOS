@@ -4,7 +4,7 @@
 
 Você acaba de instalar o KapilaOS. Em alguns minutos, sua empresa vai
 ter uma memória própria, uma identidade visual aplicada em tudo que
-o sistema gerar, e 15 skills prontas pra fazer marketing, SEO, ads
+o sistema gerar, e 17 skills prontas pra fazer sites, marketing, SEO, ads
 e operação rodarem com você dirigindo.
 
 Bora voar.
@@ -69,6 +69,11 @@ Google · `/aprovar-post` publica blog + Instagram + Facebook num comando.
 `/anuncio-google` monta a campanha inteira em CSV pronto pra importar
 no Google Ads Editor · `/relatorio-ads` lê os exports de Google + Meta
 e devolve relatório semanal com alertas e recomendações.
+
+**Sites WordPress** — do local ao ar
+`/novo-wp` cria o projeto com tema filho do Hello Elementor e ambiente
+local no MAMP, e faz páginas novas por código ou Elementor · `/publicar-wp`
+compara, faz backup e publica o tema na Hostinger com confirmação.
 
 **Produção** — ferramentas do dia a dia
 `/analisar-dados` lê CSV/XLSX/PDF e gera resumo executivo ·
